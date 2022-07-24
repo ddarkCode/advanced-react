@@ -7,6 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
+    "dev": "nodemon --exec babel-node lib/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -29,5 +30,22 @@
     "react-addons-perf": "^15.4.2",
     "react-dom": "^15.6.1",
     "webpack": "^3.0.0"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
+    ]
   }
 }
