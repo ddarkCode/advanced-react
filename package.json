@@ -8,7 +8,10 @@
   },
   "scripts": {
     "dev": "set NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js",
+    "start": "set NODE_PATH=./build&& node build/server.js",
     "webpack": "webpack -wd",
+    "build-webpack": "webpack -p",
+    "build-node": "babel lib -d build --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
